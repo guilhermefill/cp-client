@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
+import Cta from '../Components/Cta';
 
 const Home = () => {
 	return (
 		<div>
 			<Navbar />
-			<p>HERO</p>
+			<Cta />
 			<p>
 				Suggestions
 				<p>Most Played</p>
