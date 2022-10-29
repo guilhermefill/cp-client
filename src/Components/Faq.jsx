@@ -17,7 +17,7 @@ import React from 'react';
 const Faq = () => {
 	return (
 		<div>
-			<Stack align="center" m={20}>
+			<Stack align="center" mx={20} my={40}>
 				<HStack align="center" spacing={20}>
 					<Flex>
 						<Stack spacing={6} w={'full'} maxW={'xl'}>

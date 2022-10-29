@@ -4,6 +4,7 @@ import Cta from '../Components/Cta';
 import Suggestions from '../Components/Suggestions';
 import Tops from '../Components/Tops';
 import Faq from '../Components/Faq';
+import Footer from '../Components/Footer';
 
 const Home = () => {
 	return (
@@ -14,7 +15,7 @@ const Home = () => {
 			<Tops />
 			<Faq />
 			<p>Who we are</p>
-			<p>Footer</p>
+			<Footer />
 		</div>
 	);
 };
