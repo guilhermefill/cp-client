@@ -13,12 +13,14 @@ import {
 	Button,
 	useMediaQuery,
 	IconButton,
+	useColorMode,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
 	const [isFullScreen] = useMediaQuery('(min-width: 780px)');
+	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<nav>
 			<Flex
@@ -59,11 +61,16 @@ const Navbar = () => {
 								</Box>
 
 								<Link>Moods</Link>
-
+								<Link>Surprise Me</Link>
 								<Link>Import Your Route</Link>
 							</HStack>
 						</HStack>
 						<Spacer />
+						<HStack spacing="1" mr="20px">
+							<Button htmlFor="toggle-mode" mb="0" onClick={toggleColorMode}>
+								{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+							</Button>
+						</HStack>
 						<HStack spacing="3">
 							<Button>
 								<Link>Sign in</Link>
@@ -96,6 +103,9 @@ const Navbar = () => {
 										<Link>Moods</Link>
 									</MenuItem>
 									<MenuItem>
+										<Link>Surprise Me</Link>
+									</MenuItem>
+									<MenuItem>
 										<Link>Import Your Route</Link>
 									</MenuItem>
 									<MenuItem>
@@ -106,6 +116,11 @@ const Navbar = () => {
 									</MenuItem>
 								</MenuList>
 							</Menu>
+							<HStack spacing="1" mr="20px">
+								<Button htmlFor="toggle-mode" mb="0" onClick={toggleColorMode}>
+									{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+								</Button>
+							</HStack>
 						</HStack>
 					</>
 				)}
