@@ -14,6 +14,7 @@ import {
 	useMediaQuery,
 	IconButton,
 	useColorMode,
+	Text,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { HamburgerIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
@@ -36,7 +37,7 @@ const Navbar = () => {
 			>
 				{isFullScreen ? (
 					<>
-						<HStack spacing="100" justify="space-between" ml="5px">
+						<HStack spacing="20" justify="space-between" ml="5px">
 							<Box>
 								<Heading as="h3" size="lg">
 									<Link>Cycling Playlists</Link>
@@ -45,7 +46,9 @@ const Navbar = () => {
 							<HStack spacing="10" justify="space-between">
 								<Box>
 									<Menu isLazy>
-										<MenuButton>Routes</MenuButton>
+										<MenuButton fontWeight={'600'} fontSize={20}>
+											Routes
+										</MenuButton>
 										<MenuList>
 											<MenuItem>
 												<Link>By City</Link>
@@ -60,9 +63,29 @@ const Navbar = () => {
 									</Menu>
 								</Box>
 
-								<Link>Moods</Link>
-								<Link>Surprise Me</Link>
-								<Link>Import Your Route</Link>
+								<Link>
+									<Text fontWeight={'600'} fontSize={20}>
+										Moods
+									</Text>
+								</Link>
+								<Menu isLazy>
+									<MenuButton fontWeight={'600'} fontSize={20}>
+										Create
+									</MenuButton>
+									<MenuList>
+										<MenuItem>
+											<Link>Playlist For My Route</Link>
+										</MenuItem>
+										<MenuItem>
+											<Link>Route For My Playlist</Link>
+										</MenuItem>
+									</MenuList>
+								</Menu>
+								<Link>
+									<Text fontWeight={'600'} fontSize={20}>
+										Surprise Me
+									</Text>
+								</Link>
 							</HStack>
 						</HStack>
 						<Spacer />
@@ -106,7 +129,7 @@ const Navbar = () => {
 										<Link>Surprise Me</Link>
 									</MenuItem>
 									<MenuItem>
-										<Link>Import Your Route</Link>
+										<Link>Create</Link>
 									</MenuItem>
 									<MenuItem>
 										<Link>Sign in</Link>

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import Cta from '../Components/Cta';
 import Suggestions from '../Components/Suggestions';
+import Tops from '../Components/Tops';
 
 const Home = () => {
 	return (
@@ -9,7 +10,7 @@ const Home = () => {
 			<Navbar />
 			<Cta />
 			<Suggestions />
-			<p>Section 2</p>
+			<Tops />
 			<p>FAQ</p>
 			<p>Who we are</p>
 			<p>Footer</p>
