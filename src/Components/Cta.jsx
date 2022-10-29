@@ -14,9 +14,10 @@ const Cta = () => {
 	return (
 		<div>
 			<Stack
-				minH={'85vh'}
+				minH={'87vh'}
 				direction={{ base: 'column', md: 'row' }}
-				mx={'25px'}
+				m={'10px'}
+				mb={6}
 			>
 				<Flex p={8} flex={1} align={'center'} justify={'center'}>
 					<Stack spacing={6} w={'full'} maxW={'xl'}>
@@ -45,7 +46,8 @@ const Cta = () => {
 						</Heading>
 						<Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.400'}>
 							Find the right tunes for your ride. With our community curated
-							playlists you will find the perfect sound for every ride.
+							playlists you will find the perfect sound for every ride. Find
+							your playlist based on your route or the mood you are going for.
 						</Text>
 						<Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
 							<Button
