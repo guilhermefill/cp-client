@@ -11,6 +11,7 @@ import ItemCard from './ItemCard';
 
 const SuggestionCarousel = (props) => {
 	const [isFullScreen] = useMediaQuery('(min-width: 780px)');
+	const [isOverSized] = useMediaQuery('(min-width: 1600px)');
 	const { sectionTitle } = props;
 	return (
 		<div>
@@ -23,6 +24,7 @@ const SuggestionCarousel = (props) => {
 						<ItemCard />
 						<ItemCard />
 						<ItemCard />
+						{isOverSized ? <ItemCard /> : <></>}
 						<IconButton
 							fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
 							variant="outline"
@@ -36,6 +38,7 @@ const SuggestionCarousel = (props) => {
 						<ItemCard />
 						<ItemCard />
 						<ItemCard />
+
 						<IconButton
 							fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
 							variant="outline"

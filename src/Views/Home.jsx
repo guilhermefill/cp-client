@@ -4,6 +4,7 @@ import Cta from '../Components/Cta';
 import Suggestions from '../Components/Suggestions';
 import Tops from '../Components/Tops';
 import Faq from '../Components/Faq';
+import WhoWeAre from '../Components/WhoWeAre';
 import Footer from '../Components/Footer';
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
 			<Suggestions />
 			<Tops />
 			<Faq />
-			<p>Who we are</p>
+			<WhoWeAre />
 			<Footer />
 		</div>
 	);

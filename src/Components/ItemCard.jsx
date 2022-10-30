@@ -22,6 +22,7 @@ const ItemCard = () => {
 					boxShadow={'2xl'}
 					rounded={'md'}
 					overflow={'hidden'}
+					_hover={{ transform: 'scale(1.05)' }}
 				>
 					<Image
 						h={'200px'}
