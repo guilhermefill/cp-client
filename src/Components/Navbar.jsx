@@ -40,7 +40,7 @@ const Navbar = () => {
 						<HStack spacing="20" justify="space-between" ml="5px">
 							<Box>
 								<Heading as="h3" size="lg">
-									<Link>Cycling Playlists</Link>
+									<Link to="/">Cycling Playlists</Link>
 								</Heading>
 							</Box>
 							<HStack spacing="10" justify="space-between">
@@ -51,13 +51,13 @@ const Navbar = () => {
 										</MenuButton>
 										<MenuList>
 											<MenuItem>
-												<Link>By City</Link>
+												<Link to="/routes">By City</Link>
 											</MenuItem>
 											<MenuItem>
-												<Link>By Distance</Link>
+												<Link to="/routes">By Distance</Link>
 											</MenuItem>
 											<MenuItem>
-												<Link>By Type</Link>
+												<Link to="/routes">By Type</Link>
 											</MenuItem>
 										</MenuList>
 									</Menu>
