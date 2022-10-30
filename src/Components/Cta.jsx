@@ -9,6 +9,7 @@ import {
 	Image,
 	useColorModeValue,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Cta = () => {
 	return (
@@ -60,14 +61,14 @@ const Cta = () => {
 								fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
 								p={'6'}
 							>
-								Routes
+								<Link to="/routes">Routes</Link>
 							</Button>
 							<Button
 								rounded={'full'}
 								fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
 								p={'6'}
 							>
-								Moods
+								<Link to="/moods">Moods</Link>
 							</Button>
 						</Stack>
 					</Stack>

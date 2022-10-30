@@ -65,7 +65,7 @@ const Navbar = () => {
 
 								<Link>
 									<Text fontWeight={'600'} fontSize={20}>
-										Moods
+										<Link to="/moods">Moods</Link>
 									</Text>
 								</Link>
 								<Menu isLazy>
