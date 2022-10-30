@@ -20,7 +20,7 @@ const SuggestionCarousel = (props) => {
 					{sectionTitle}
 				</Heading>
 				{isFullScreen ? (
-					<HStack spacing={10} paddingLeft={10}>
+					<HStack spacing={10} paddingLeft={10} justify={'space-between'}>
 						<ItemCard />
 						<ItemCard />
 						<ItemCard />
