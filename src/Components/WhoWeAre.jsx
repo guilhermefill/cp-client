@@ -14,10 +14,10 @@ const WhoWeAre = () => {
 		<div>
 			<Stack align="Left" mx={20} my={40} spacing={20}>
 				<Heading size="lg">Who Are We</Heading>
-				<Stack spacing={50} my={20} align={'center'}>
-					<HStack>
+				<Stack my={20} align={'center'}>
+					<HStack spacing={30}>
 						<Container>
-							<Text fontWeight={400} fontSize="lg">
+							<Text fontWeight={400} fontSize="lg" align={'justify'}>
 								There are many benefits to a joint design and development
 								system. Not only does it bring benefits to the design team, but
 								it also brings benefits to engineering teams. It makes sure that
