@@ -18,11 +18,11 @@ import { Link } from 'react-router-dom';
 const RouteCard = (props) => {
 	const [isFullScreen] = useMediaQuery('(min-width: 780px)');
 	const { post, isLoading } = props;
-
+	const linkId = isLoading ? '/' : `/routes/details/${post._id}`;
 	return (
 		<div>
 			<Center>
-				<Link to={`/routes/details/${post._id}`}>
+				<Link to={linkId}>
 					<Stack
 						boxShadow={'2xl'}
 						rounded={'md'}
