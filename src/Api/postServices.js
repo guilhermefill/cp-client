@@ -13,6 +13,10 @@ class Service {
 	getPost = (postId) => {
 		return axios.get(`${this.baseUrl}/posts/details/${postId}`);
 	};
+
+	getCarousel = (limit, offset) => {
+		return axios.post(`${this.baseUrl}/posts/carousel`, { limit, offset });
+	};
 }
 
 const postService = new Service();
