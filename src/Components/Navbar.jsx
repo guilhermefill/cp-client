@@ -63,9 +63,9 @@ const Navbar = () => {
 									</Menu>
 								</Box>
 
-								<Link>
+								<Link to="/moods">
 									<Text fontWeight={'600'} fontSize={20}>
-										<Link to="/moods">Moods</Link>
+										Moods
 									</Text>
 								</Link>
 								<Menu isLazy>
@@ -81,9 +81,9 @@ const Navbar = () => {
 										</MenuItem>
 									</MenuList>
 								</Menu>
-								<Link>
+								<Link to="/routes/details">
 									<Text fontWeight={'600'} fontSize={20}>
-										<Link to="/routes/details">Surprise Me</Link>
+										Surprise Me
 									</Text>
 								</Link>
 							</HStack>

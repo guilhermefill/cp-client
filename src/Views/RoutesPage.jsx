@@ -33,10 +33,16 @@ const RoutesPage = () => {
 		posts.length > 1 ? (
 			posts.map((post) => <RouteCard key={post._id} post={post} />)
 		) : (
-			<RouteCard isLoading />
+			<>
+				<RouteCard isLoading key={1} />
+				<RouteCard isLoading key={2} />
+				<RouteCard isLoading key={3} />
+				<RouteCard isLoading key={4} />
+				<RouteCard isLoading key={5} />
+				<RouteCard isLoading key={6} />
+				<RouteCard isLoading key={7} />
+			</>
 		);
-
-	console.log(posts);
 
 	return (
 		<div>
