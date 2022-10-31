@@ -14,8 +14,30 @@ import {
 	MenuOptionGroup,
 	MenuItemOption,
 } from '@chakra-ui/react';
+import postService from '../Api/postServices';
 
 const RoutesPage = () => {
+	const [posts, setPosts] = React.useState([]);
+	// const [limit, setLimit] = React.useState(10);
+
+	React.useEffect(() => {
+		async function fetchPosts() {
+			const allPosts = await postService.getAllPosts();
+			setPosts(allPosts.data);
+		}
+		fetchPosts();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	const postArray =
+		posts.length > 1 ? (
+			posts.map((post) => <RouteCard key={post._id} post={post} />)
+		) : (
+			<RouteCard isLoading />
+		);
+
+	console.log(posts);
+
 	return (
 		<div>
 			<Navbar />
@@ -28,7 +50,7 @@ const RoutesPage = () => {
 						Sort
 					</MenuButton>
 					<MenuList minWidth="240px">
-						<MenuOptionGroup defaultValue="asc" title="Order" type="radio">
+						<MenuOptionGroup title="Order" type="radio">
 							<MenuItemOption value="asc">Ascending</MenuItemOption>
 							<MenuItemOption value="desc">Descending</MenuItemOption>
 						</MenuOptionGroup>
@@ -39,26 +61,22 @@ const RoutesPage = () => {
 						Filter
 					</MenuButton>
 					<MenuList minWidth="240px">
-						<MenuOptionGroup defaultValue="asc" title="Type" type="radio">
-							<MenuItemOption value="asc">Road</MenuItemOption>
-							<MenuItemOption value="desc">Gravel</MenuItemOption>
-							<MenuItemOption value="desc">Mountain</MenuItemOption>
-							<MenuItemOption value="desc">Urban</MenuItemOption>
+						<MenuOptionGroup title="Type" type="radio">
+							<MenuItemOption value="road">Road</MenuItemOption>
+							<MenuItemOption value="gravel">Gravel</MenuItemOption>
+							<MenuItemOption value="mount">Mountain</MenuItemOption>
+							<MenuItemOption value="urban">Urban</MenuItemOption>
 						</MenuOptionGroup>
-						<MenuOptionGroup defaultValue="asc" title="Distance" type="radio">
-							<MenuItemOption value="asc">Under 50km</MenuItemOption>
-							<MenuItemOption value="desc">From 50 to 100km</MenuItemOption>
-							<MenuItemOption value="desc">Over 100km</MenuItemOption>
+						<MenuOptionGroup title="Distance" type="radio">
+							<MenuItemOption value="under">Under 50km</MenuItemOption>
+							<MenuItemOption value="mid">From 50 to 100km</MenuItemOption>
+							<MenuItemOption value="over">Over 100km</MenuItemOption>
 						</MenuOptionGroup>
 					</MenuList>
 				</Menu>
 			</HStack>
 			<VStack spacing={10} my={10}>
-				<RouteCard />
-				<RouteCard />
-				<RouteCard />
-				<RouteCard />
-				<RouteCard />
+				{postArray}
 			</VStack>
 			<Center my={35}>
 				<Button

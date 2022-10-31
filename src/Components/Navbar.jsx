@@ -83,7 +83,7 @@ const Navbar = () => {
 								</Menu>
 								<Link>
 									<Text fontWeight={'600'} fontSize={20}>
-										Surprise Me
+										<Link to="/routes/details">Surprise Me</Link>
 									</Text>
 								</Link>
 							</HStack>
