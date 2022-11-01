@@ -15,7 +15,7 @@ class Service {
 	};
 
 	getCarousel = (limit, offset) => {
-		return axios.post(`${this.baseUrl}/posts/carousel`, { limit, offset });
+		return axios.post(`${this.baseUrl}/posts/carousel/`, { limit, offset });
 	};
 }
 
